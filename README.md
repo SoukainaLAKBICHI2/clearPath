@@ -21,12 +21,12 @@ cd clearPath
 ### 2. Create a Virtual Environment + Jupyter Kernel
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+python -m venv YoloEnv
+source YoloEnv/bin/activate  # On Windows use: YoloEnv\Scripts\activate
 
 pip install --upgrade pip
 pip install ipykernel
-python -m ipykernel install --user --name=clearpath-kernel --display-name "Python (ClearPath)"
+python -m ipykernel install --user --name=YoloEnv --display-name "Python (YoloEnv)"
 ```
 
 ### 3. Install Dependencies
