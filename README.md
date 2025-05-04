@@ -1,13 +1,29 @@
 
-# 👁️ ClearPath - Object Detection & Distance Estimation for the Visually Impaired
+# 👁️ ClearPath - Custom Object Detection & Distance Estimation for the Visually Impaired
 
-This project uses a YOLOv8 model to detect nearby objects in real time via a webcam and estimates their distance. It then announces these objects using voice notifications.
+ClearPath is a real-time object detection and distance estimation system designed to assist visually impaired individuals. It uses a **YOLOv8s** model trained on a **custom dataset of 25 objects**, with verbal announcements to alert the user of nearby objects and their distance.
 
 ## 📦 Requirements
 
 - Python 3.8+
-- Jupyter (for interactive usage)
+- Jupyter Notebook (for interactive exploration)
+- A webcam (for real-time video input)
 - Virtual environment (recommended)
+
+## 📁 Custom Dataset
+
+This project **does not rely on COCO**. Instead, we created and labeled our **own dataset** containing 25 commonly encountered objects by visually impaired individuals, such as:
+
+[Chair, Lamp, TrashBin, Tree, Car, Crosswalk, Person, Motorcycle, Bicycle,
+TrafficLight, CrossSign, Dog, Wall, Bus, Cat, Barrier, DeliveryBox, FireHydrant,
+FallenSign, Fence, Hole_in_the_road, Road_cone, Open_manhole, Road_workahead, shopping_cart]
+
+- Dataset Annotation Tool: [LabelImg](https://github.com/tzutalin/labelImg)
+- Dataset Split: Train/Validation (80/20)
+- Image Size: 640x640
+- Model: YOLOv8s
+- Epochs: 100
+
 
 ## 🛠️ Setup Instructions
 
@@ -48,7 +64,6 @@ pip install -r requirements.txt
 - Real-time object detection and voice guidance
 - Smart navigation for robotics and embedded systems
 
-You can get the full list from [COCO official classes](https://github.com/pjreddie/darknet/blob/master/data/coco.names).
 
 ## 👩‍💻 Author
 
